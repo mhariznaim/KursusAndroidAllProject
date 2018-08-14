@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ftmk.mhariznaim.hellowwduniakotlin.ChooseRandomActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtTxtNum"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:ems="10"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnGuess"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="fnGuess"
+            android:text="GUESS!" />
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="fnReset"
+            android:text="Reset" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
