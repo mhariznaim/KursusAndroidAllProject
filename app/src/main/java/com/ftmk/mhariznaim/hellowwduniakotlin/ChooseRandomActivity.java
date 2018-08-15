@@ -9,8 +9,11 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class ChooseRandomActivity extends AppCompatActivity {
@@ -18,6 +21,8 @@ public class ChooseRandomActivity extends AppCompatActivity {
     EditText edtGuess;
     int intCnt = 0, intRandom;
     Button btnGuess, btnReset;
+    Spinner spin1 ;
+    AutoCompleteTextView autoCompNegeri;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +31,8 @@ public class ChooseRandomActivity extends AppCompatActivity {
         edtGuess = findViewById(R.id.edtTxtNum);
         btnGuess = findViewById(R.id.btnGuess);
         btnReset = findViewById(R.id.btnReset);
+        spin1 = findViewById(R.id.spinRandom);
+        autoCompNegeri = findViewById(R.id.autComNegeri);
 
         intRandom = (int) (Math.random() * 100);
         Log.d("NomborTeka", intRandom + "");
@@ -33,9 +40,23 @@ public class ChooseRandomActivity extends AppCompatActivity {
         if (intCnt < 3) {
             btnReset.setVisibility(View.INVISIBLE);
         }
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(ChooseRandomActivity.this, R.array.spinner1, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spin1.setAdapter(adapter);
+
+        /*ArrayAdapter<String> adapterNeg = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_dropdown_item,R.id.autComNegeri);
+    }*/
+
+        ArrayAdapter<CharSequence> adapterNeg = ArrayAdapter.createFromResource(this, R.array.spinnNegeri, android.R.layout.simple_spinner_dropdown_item);
+        adapterNeg.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        autoCompNegeri.setAdapter(adapterNeg);
+        autoCompNegeri.setThreshold(1);
+
+
     }
 
-    public void fnGuess(View view) {
+        public void fnGuess(View view) {
         Log.d("NomborTeka", intRandom + "");
         if (intCnt < 3) {
 
@@ -58,10 +79,16 @@ public class ChooseRandomActivity extends AppCompatActivity {
 
     }
 
+
     public void fnReset(View view) {
         btnGuess.setVisibility(View.VISIBLE);
         btnReset.setVisibility(View.INVISIBLE);
         intCnt = 0;
+
+        String strNeg = autoCompNegeri.getText().toString();
+        String strSpin = spin1.getSelectedItem().toString();
+
+        Log.d("mesej", strNeg + "... " + strSpin);
     }
 
     @Override

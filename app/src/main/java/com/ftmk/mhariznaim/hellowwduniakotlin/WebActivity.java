@@ -26,4 +26,17 @@ public class WebActivity extends AppCompatActivity {
         });
         webViewUs.setWebChromeClient(new WebChromeClient());
     }
+
+    @Override
+    public void onBackPressed() {
+        if(webViewUs.canGoBack())
+        {
+            webViewUs.goBack();
+        }
+        else
+        {
+            super.onBackPressed();
+        }
+
+    }
 }

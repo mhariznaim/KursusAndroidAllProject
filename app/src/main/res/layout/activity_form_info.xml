@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ftmk.mhariznaim.hellowwduniakotlin.ChooseRandomActivity">
+    tools:context="com.ftmk.mhariznaim.hellowwduniakotlin.FormInfoActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,35 +12,45 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edtTxtNum"
+            android:id="@+id/edtName"
             android:layout_width="match_parent"
-            android:layout_height="82dp"
+            android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:hint="Roti John Dowh"
+            android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/btnGuess"
+        <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="fnGuess"
-            android:text="GUESS!" />
+            android:ems="10"
+            android:hint="test@yehuu.com"
+            android:inputType="textEmailAddress" />
 
-        <Button
-            android:id="@+id/btnReset"
+        <EditText
+            android:id="@+id/edtPhone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="fnReset"
-            android:text="Reset" />
+            android:ems="10"
+            android:hint="60345123"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/edtMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textMultiLine" />
 
         <Spinner
-            android:id="@+id/spinRandom"
+            android:id="@+id/spinInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <AutoCompleteTextView
-            android:id="@+id/autComNegeri"
+        <Button
+            android:id="@+id/btnSend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Selangor, Melaka" />
+            android:text="Button" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

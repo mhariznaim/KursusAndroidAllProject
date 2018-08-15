@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">HellowwDuniaKotlin</string>
+    <string-array name="spinner1">
+        <item>IT</item>
+        <item>Admin</item>
+        <item>Machai</item>
+        <item>Bossy</item>
+    </string-array>
+    <string-array name="spinnNegeri">
+        <item>Selangor</item>
+        <item>Sabah</item>
+        <item>Sarawak</item>
+        <item>Kelantan</item>
+        <item>Koula Lumpor</item>
+        <item>Melaka</item>
+    </string-array>
 </resources>
