@@ -14,4 +14,25 @@
         <item>Koula Lumpor</item>
         <item>Melaka</item>
     </string-array>
+    <string-array name="namaRestoran">
+        <item>Asampedas claypot</item>
+        <item>Kuih Keria</item>
+        <item>Mee Obdo</item>
+        <item>Kelapa Goncang</item>
+    </string-array>
+    <string-array name="titleLocation">
+        <item>Bostonnn</item>
+        <item>Costa Ricau</item>
+        <item>Parakeet</item>
+    </string-array>
+    <string-array name="subtitleLoc">
+        <item>Kat Amerika ni</item>
+        <item>Ni Rasa kat Brazil kut</item>
+        <item>Haa ni tak tauu</item>
+    </string-array>
+    <string-array name="imageDrawLoc">
+        <item>@drawable/boston_city_flow</item>
+        <item>@drawable/costa_rican_frog</item>
+        <item>@drawable/pensive_parakeet</item>
+    </string-array>
 </resources>

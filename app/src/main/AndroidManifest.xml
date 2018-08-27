@@ -32,16 +32,33 @@
             -->
         </activity>
         <activity android:name=".ChooseRandomActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name=".WebActivity"
+            android:parentActivityName=".ChooseRandomActivity" />
+        <activity android:name=".FormInfoActivity" />
+        <activity android:name=".RecyclerMainActivity">
+           <!-- <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".RecyclerViewPictureActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".WebActivity"
-            android:parentActivityName=".ChooseRandomActivity" />
-        <activity android:name=".FormInfoActivity"></activity>
     </application>
 
 </manifest>
