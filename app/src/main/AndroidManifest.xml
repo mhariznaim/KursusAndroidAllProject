@@ -46,13 +46,23 @@
             android:parentActivityName=".ChooseRandomActivity" />
         <activity android:name=".FormInfoActivity" />
         <activity android:name=".RecyclerMainActivity">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".RecyclerViewPictureActivity">
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>-->
         </activity>
-        <activity android:name=".RecyclerViewPictureActivity">
+        <activity android:name=".GetRandomUserApiActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
